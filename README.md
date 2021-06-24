@@ -22,6 +22,7 @@ To start shiny interface for monobin package, just type:
 monobinShiny::monobinApp()
 ```
 If the application is install and run properly, the following should appear in web browser:
+
 ![plot](./pics/pic00.png)
 
 
