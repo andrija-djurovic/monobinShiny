@@ -34,3 +34,7 @@ amount.bin.1[[1]]
 #force trend to decreasing
 cum.bin(x = gcd$amount, y = gcd$qual, g = 20, force.trend = "d")[[1]]
 ```
+Picture 1:
+![Alt text](/../<branch name>/path/to/image.png?raw=true "Optional Title")
+
+
