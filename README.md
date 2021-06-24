@@ -1,9 +1,6 @@
 # monobinSiny
 Shiny based user interface for monobin R package
 
-<!-- badges: start -->
-<!-- badges: end -->
-
 The goal of monobin is to perform monotonic binning of numeric risk factor in credit 
 rating models (PD, LGD, EAD) development. All functions handle both binary and 
 continuous target variable. Missing values and other possible special values are treated 
@@ -35,6 +32,6 @@ amount.bin.1[[1]]
 cum.bin(x = gcd$amount, y = gcd$qual, g = 20, force.trend = "d")[[1]]
 ```
 Picture 1:
-![Alt text](https://github.com/[andrija-djurovic]/[monobinShiny]/blob/[main]/pic00.jpg?raw=true)
+![Alt text](https://github.com/andrija-djurovic/monobinShiny/blob/main/pics/pic00.jpg?raw=true)
 
 
