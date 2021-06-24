@@ -14,7 +14,7 @@ You can install the released version of monobinShiny from [CRAN](https://CRAN.R-
 install.packages("monobinShiny")
 ```
 
-## Example
+## How to start shiny UI for monobin package?
 
 To start shiny interface for monobin package, just type:
 
@@ -25,4 +25,6 @@ If the application is install and run properly, the following should appear in w
 
 ![plot](./pics/pic00.png)
 
+## DATA MANAGER MODULE
+![plot](./pics/pic01.png)
 
