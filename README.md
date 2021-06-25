@@ -28,3 +28,4 @@ If the application is install and run properly, the following should appear in w
 ## DATA MANAGER MODULE
 ![plot](./pics/pic01.png)
 
+> :warning: Be aware that only risk factors identified as of numeric type will be processed for other two modules. When import the data, in Data log output, overview of the data structure will be presented along with information about identified numeric / categorical risk factors.
