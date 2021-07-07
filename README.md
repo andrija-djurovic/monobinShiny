@@ -68,6 +68,9 @@ After selecting target variable, usually imputation procedures are run.
             The same procedure will run for outlier imputation adding new risk factor as  ```selected risk factor + _out_ + selected upper percentile + _ +  selected lower 
             percentile``` (e.g. age_out_0.99_0.01).
             Special attention should be paid when data set contains more risk factors, becasue final number of risk factors can increase significantly using imputations.
+
+> :information_source: In case that imputation values cannot be calculated, download buttons will appear providing possibility to the user to download and check for which risk 
+ factors inputs are not defined properly (all special case values and special case values to be imputed). 
             
 
 Ultimate goal of this module is to create report of descriptive statistics. Image below presents example of descriptive report. Details on calculated metrics can be found in help page of ```?desc.stat```.
