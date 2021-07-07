@@ -12,7 +12,7 @@ interface, while special case and outlier imputation functions are written to be
 
 ## Installation
 
-You can install the released version of monobinShiny from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of monobinShiny from [CRAN](https://CRAN.R-project.org) executing the following line of the code:
 
 ``` r
 install.packages("monobinShiny")
