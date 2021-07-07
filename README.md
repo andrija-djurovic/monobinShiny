@@ -71,8 +71,7 @@ After selecting target variable, usually imputation procedures are run.
             
 
 Ultimate goal of this module is to create report of descriptive statistics. Image below presents example of descriptive report. Details on calculated metrics can be found in help page of ```?desc.stat```.
-As it can be seen, user has a possibility to 
-download descriptive statistics report as well as data set used for its creation. If imputation procedures are run, data set will contain added risk factors.
+As it can be seen, user has a possibility to download descriptive statistics report as well as data set used for its creation. If imputation procedures are run, data set will contain added risk factors (.csv files).
 
-![plot](./pics/pic03.png) 
+![plot](./pics/pic04.png) 
 
