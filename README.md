@@ -74,5 +74,5 @@ Ultimate goal of this module is to create report of descriptive statistics. Imag
 As it can be seen, user has a possibility to 
 download descriptive statistics report as well as data set used for its creation. If imputation procedures are run, data set will contain added risk factors.
 
-![plot](./pics/pic03.png)
+![plot](./pics/pic03.png) 
 
