@@ -25,7 +25,7 @@ To start shiny interface for monobin package, just type:
 ``` r
 monobinShiny::monobinApp()
 ```
-If the application is install and run properly, the following should appear in web browser:
+If the application is installed and run properly, the following should appear in web browser:
 
 ![plot](./pics/pic00.png)
 
