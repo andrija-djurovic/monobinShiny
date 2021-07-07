@@ -85,3 +85,6 @@ arguments of selected binning algorithm. Available binning algorithms are those 
 
 ![plot](./pics/pic05.png)
 
+Running the binning procedure will result in summary table of processed risk factors and transformed data set. Both outputs can be downloaded as .csv files.
+
+![plot](./pics/pic06.png)
