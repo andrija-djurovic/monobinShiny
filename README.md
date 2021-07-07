@@ -47,4 +47,5 @@ During the manual data import, set of checks are performed such as: file extensi
 If data are imported successfully, in Data Import log output, overview of the data structure will be presented along with information about identified numeric / categorical 
 variables.
 
+
 > :warning: Be aware that only variables identified as of numeric type will be processed for other two modules. 
