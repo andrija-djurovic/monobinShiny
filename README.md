@@ -55,6 +55,6 @@ This module covers the standard steps of univariate and bivariate analysis in mo
 outlier imputation based on selected percentiles thresholds.
 Before running any of the imputation procedures, target variable needs to be selected:
 
-
+![plot](./pics/pic02.png)
 
 
