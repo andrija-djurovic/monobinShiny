@@ -1,4 +1,4 @@
-# monobinSiny
+# monobinShiny
 This is an add-on package to the ```monobin``` package that simplifies its use. The goal of monobin is to perform monotonic binning of numeric risk factor in credit 
 rating models (PD, LGD, EAD) development. All functions handle both binary and continuous target variable. Missing values and other possible special values are treated 
 separately from so-called complete cases.
@@ -37,7 +37,8 @@ Application consists of the three modules:
 Following sections provide short description of the each module.
 
 ## DATA MANAGER MODULE
-This module serves for data import: manual import of prepared .csv file or automatic import of ```gcd``` from ```monobin``` package.
+This module serves for data import: manual import of prepared .csv file (browsing for a file) or automatic import of ```gcd``` from ```monobin``` package (Import dummy data).
+
 ![plot](./pics/pic01.png)
 
 > :warning: Be aware that only risk factors identified as of numeric type will be processed for other two modules. When import the data, in Data Import log output, overview of the data structure will be presented along with information about identified numeric / categorical risk factors.
