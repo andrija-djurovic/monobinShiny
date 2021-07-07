@@ -31,7 +31,11 @@ If the application is installed and started properly, the following should appea
 ![plot](./pics/pic00.png)
 
 Application consists of the three modules:
-1. data 
+1. data manager
+2. descriptive statistics and imputation
+3. monotonic binning
+
+Following sections provides short description of each module.
 
 ## DATA MANAGER MODULE
 ![plot](./pics/pic01.png)
