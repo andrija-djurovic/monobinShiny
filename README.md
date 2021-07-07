@@ -80,6 +80,8 @@ As it can be seen, user has a possibility to download descriptive statistics rep
 
 ## MONOTONIC BINNING
 Monotonic binning module reflects the main purpose of this package - interface to ```monobin``` package. Similar to the previous module, user should first select the target 
-variable, then risk factors ready for binning (if imputation is performed, the list of available risk factors will contain newly created risk factors) and finally binning 
-algorithm. Available binning algorithms are those implemented in ```monobin``` package.
+variable, then risk factors ready for binning (if imputation is performed, the list of available risk factors will contain newly created risk factors) and finally define 
+arguments of selected binning algorithm. Available binning algorithms are those implemented in ```monobin``` package.
+
+![plot](./pics/pic05.png)
 
