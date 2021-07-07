@@ -75,3 +75,4 @@ As it can be seen, user has a possibility to download descriptive statistics rep
 
 ![plot](./pics/pic04.png) 
 
+## MONOTONIC BINNING
