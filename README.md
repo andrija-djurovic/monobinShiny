@@ -35,10 +35,13 @@ Application consists of the three modules:
 3. monotonic binning
 
 Following sections provide short description of the each module.
+> NOTE: Almost all reactive elements of the application results with a notification, so be aware of this as presented in the right lower corner.
 
 ## DATA MANAGER MODULE
 This module serves for data import: manual import of prepared .csv file (browsing for a file) or automatic import of ```gcd``` from ```monobin``` package (Import dummy data).
 
 ![plot](./pics/pic01.png)
+
+During manual data import, set of checks are performed such as: 
 
 > :warning: Be aware that only risk factors identified as of numeric type will be processed for other two modules. When import the data, in Data Import log output, overview of the data structure will be presented along with information about identified numeric / categorical risk factors.
