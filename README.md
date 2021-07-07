@@ -34,9 +34,10 @@ Application consists of the three modules:
 2. descriptive statistics and imputation
 3. monotonic binning
 
-Following sections provides short description of each module.
+Following sections provide short description of the each module.
 
 ## DATA MANAGER MODULE
+This module serves for data import: manual import of prepared .csv file or automatic import of ```gcd``` from ```monobin``` package.
 ![plot](./pics/pic01.png)
 
 > :warning: Be aware that only risk factors identified as of numeric type will be processed for other two modules. When import the data, in Data Import log output, overview of the data structure will be presented along with information about identified numeric / categorical risk factors.
