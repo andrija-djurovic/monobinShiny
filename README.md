@@ -63,10 +63,10 @@ After selecting target variable, usually imputation procedures are run.
 ![plot](./pics/pic03.png)
 
 > :warning: Be aware only imputation procedures will create and add new risk factor to imported data set. Special case values imputation will add the new risk factor names 
-            as ```selected risk factor + _sc_ + selected imputation method ````. Example: if user select risk factor age and mean as imputation method, new risk factor will be 
+            as ```selected risk factor + _sc_ + selected imputation method ```. Example: if user select risk factor age and mean as imputation method, new risk factor will be 
             added as age_sc_mean.
             The same procedure will run for outlier imputation adding new risk factor as  ```selected risk factor + _out_ + selected upper percentile + _ +  selected lower 
-            percentile```` (e.g. age_out_0.99_0.01).
+            percentile``` (e.g. age_out_0.99_0.01).
             Special attention should be paid when data set contains more risk factors, becasue final number of risk factors can increase significantly using imputations.
             
 
