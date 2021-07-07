@@ -35,7 +35,7 @@ Application consists of the three modules:
 3. monotonic binning
 
 Following sections provide short description of the each module.
-> :information_source: Almost all reactive elements of the application results with a notification, so be aware of this as presented in the right lower corner.
+> :information_source: Almost all reactive elements of the application results with a notification, so be aware of this as presented in the lower right corner.
 
 ## DATA MANAGER MODULE
 This module serves for data import: manual import browsing for a file (only .csv files accepted) or automatic import of ```gcd``` from ```monobin``` package (Import dummy 
@@ -88,3 +88,11 @@ arguments of selected binning algorithm. Available binning algorithms are those 
 Running the binning procedure will result in summary table of processed risk factors and transformed data set. Both outputs can be downloaded as .csv files.
 
 ![plot](./pics/pic06.png)
+
+## Data checks
+As already stated, almost every reacrive element of the application produce notification output (lower righ corner). Example of error notification for trying to import file other than .csv is
+presented in the following image
+
+![plot](./pics/pic06.png)
+
+Besided above check, some of other checks are: 
