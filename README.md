@@ -18,16 +18,20 @@ You can install the released version of monobinShiny from [CRAN](https://CRAN.R-
 install.packages("monobinShiny")
 ```
 
-## How to start shiny UI for monobin package?
+## How to start monobinShiny application?
 
-To start shiny interface for monobin package, just type:
+After installation, to start shiny application, just type:
 
 ``` r
-monobinShiny::monobinApp()
+suppressMessages(library(monobinShiny))
+monobinShinyApp()
 ```
-If the application is installed and run properly, the following should appear in web browser:
+If the application is installed and started properly, the following should appear in web browser:
 
 ![plot](./pics/pic00.png)
+
+Application consists of the three modules:
+1. data 
 
 ## DATA MANAGER MODULE
 ![plot](./pics/pic01.png)
