@@ -5,7 +5,7 @@ separately from so-called complete cases.
 
 ```monobinSiny``` provides shiny-based user interface (UI) to monobin packaga and it can be especially handy for less experienced R users as well as for those who intend to 
 perform quick scanning of numeric risk factors when building credit rating models. The additional functions implemented in ```monobinShiny``` that do no exist in ```monobin``` 
-package are descriptive statistics, special case and outliers imputation. The function descriptive statistics is exported and can be used in R sessions independently from the 
+package are: descriptive statistics, special case and outliers imputation. The function descriptive statistics is exported and can be used in R sessions independently from the 
 user interface, while special case and outlier imputation functions are written to be used with shiny UI.
 
 
