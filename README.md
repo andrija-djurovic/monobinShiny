@@ -11,7 +11,7 @@ user interface, while special case and outlier imputation functions are written 
 
 ## Installation
 
-You can install the released version of monobinShiny from [CRAN](https://CRAN.R-project.org) executing the following line of the code:
+User can install the released version of monobinShiny from [CRAN](https://CRAN.R-project.org) executing the following line of the code:
 
 ``` r
 install.packages("monobinShiny")
