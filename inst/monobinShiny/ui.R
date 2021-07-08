@@ -1,4 +1,4 @@
-ui <- dashboardPage(skin = "black", title = "Shiny user nterface for monobin package", 
+ui <- dashboardPage(skin = "black", title = "Shiny user interface for monobin package", 
 
 dashboardHeader(title = HTML("Shiny interface for 
 				     <a href = 'https://cran.r-project.org/web/packages/monobin/monobin.pdf'>
