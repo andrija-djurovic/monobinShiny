@@ -85,10 +85,10 @@ Monotonic binning module reflects the main purpose of this package - interface t
 variable, then risk factors ready for binning (if imputation is performed, the list of available risk factors will contain newly created risk factors) and finally define 
 arguments of selected binning algorithm. Available binning algorithms are those implemented in ```monobin``` package.
 
-> :warning: **Recommendation is always to keep the defaulted special case elements, or if user considers only NA to supplement it with NaN (NA, NaN). This is due to input check 
->           in  ```monobin``` package that will return error in case of defining only NA as a special case (!is.numeric(NA)). For current version of ```monobinShiny``` this is 
-             solved adding NaN if only NA is defined as the special case element.
-             With new release of ```monobin``` package this will be fixed.**
+> :warning: **Recommendation is always to keep the defaulted special case elements, or if user considers only NA to supplement it with NaN (NA, NaN). This is due to the input 
+            check in  ```monobin``` package that will return error in case of defining only NA as a special case (!is.numeric(NA)). For current version of ```monobinShiny``` 
+            this is solved adding NaN if only NA is defined as the special case element.
+            With new release of ```monobin``` package this will be fixed.**
              
 
 ![plot](./pics/pic05.png)
