@@ -92,7 +92,7 @@ Running the binning procedure will result in summary table of processed risk fac
 ![plot](./pics/pic06.png)
 
 > :warning: **Recommendation is always to keep the defaulted special case elements, or if user considers only NA to supplement it with NaN (NA, NaN). This is due to the input 
-            check in  ```monobin``` package that will return an error in case of defining only NA as a special case (!is.numeric(NA)). 
+            check in  ```monobin``` package (CRAN version 0.1.0) that will return an error in case of defining only NA as a special case (!is.numeric(NA)). 
             With new release of ```monobin``` package this will be fixed.**
            
 Example of error (only NA selected in special case elements field):
@@ -100,6 +100,13 @@ Example of error (only NA selected in special case elements field):
 
 Fix of previous error (NaN added to NA in special case elements field - NA, NaN):
 ![plot](./pics/pic09.png)
+
+
+> :information_source: In latest version (0.1.1) of ```monobin``` package that is available on github above problem is fixed.
+                       Development (github) version can be installed using the following commands:
+                       ``` r
+                        library(devtools)
+                        install_github("andrija-djurovic/monobin")
 
 
 ## Data checks and notifications
