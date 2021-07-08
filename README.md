@@ -87,7 +87,7 @@ arguments of selected binning algorithm. Available binning algorithms are those 
 
 > :warning: **Recommendation is always to keep defaulted special case elements, or if user considers only NA to supplement it with NaN (NA, NaN). This is due to input check in 
              ```monobin``` package that will return error in case of defining only NA as a special case (!is.numeric(NA)). With new release of ```monobin``` package this
-             will be fixed.***
+             will be fixed.**
              
 
 ![plot](./pics/pic05.png)
