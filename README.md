@@ -58,12 +58,12 @@ Before running any of the imputation procedures, target variable needs to be sel
 
 ![plot](./pics/pic02.png)
 
-<br/><br/>
+<br/>
 After selecting target variable, usually imputation procedures are run. 
 
 ![plot](./pics/pic03.png)
 
-<br/><br/>
+<br/>
 > :warning: Be aware that imputation procedures will create and add new risk factor to imported data set. Special case values imputation will add the new risk factor names 
             as ```selected risk factor + _sc_ + selected imputation method ```. Example: if user select risk factor age and mean as imputation method, new risk factor will be 
             added as age_sc_mean.
@@ -76,6 +76,7 @@ After selecting target variable, usually imputation procedures are run.
                        case values to be imputed should be defined as a list of numeric values (or values that can coerce to numeric including NA) separated by comma (,).
              
 
+<br/>
 Ultimate goal of this module is to create report of descriptive statistics. Image below presents example of descriptive report. Details on calculated metrics can be found in 
 the help page of the function  ```desc.stat (?desc.stat)```.
 As it can be seen, user has a possibility to download descriptive statistics report as well as data set used for its creation. If imputation procedures are run, data set will contain added risk factors (.csv files).
