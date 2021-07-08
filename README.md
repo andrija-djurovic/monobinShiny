@@ -86,7 +86,7 @@ variable, then risk factors ready for binning (if imputation is performed, the l
 arguments of selected binning algorithm. Available binning algorithms are those implemented in ```monobin``` package.
 
 > :warning: **Recommendation is always to keep defaulted special case elements, or if user considers only NA to supplement it with NaN (NA, NaN). This is due to input check in 
-             ```monobin``` package that will return error in case of defininf only NA as a special case (!is.numeric(NA)). With new release of ```monobin`` package this
+             ```monobin``` package that will return error in case of defining only NA as a special case (!is.numeric(NA)). With new release of ```monobin``` package this
              will be fixed.***
              
 
