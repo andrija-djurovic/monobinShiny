@@ -47,8 +47,8 @@ data).
 During the manual data import, set of checks are performed such as: file extension, approprietness of .csv file and the number of identified numeric variables. 
 If data are imported successfully, in Data Import log output, overview of the data structure will be presented along with information about identified numeric / categorical 
 variables.
-
 <br/>
+
 > :warning: Be aware that only variables identified as of numeric type will be processed for other two modules. 
 
 ## DESCRIPTIVE STATISTICS AND IMPUTATION
