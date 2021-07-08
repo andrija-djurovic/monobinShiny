@@ -43,11 +43,12 @@ data).
 
 ![plot](./pics/pic01.png)
 
+<br/>
 During the manual data import, set of checks are performed such as: file extension, approprietness of .csv file and the number of identified numeric variables. 
 If data are imported successfully, in Data Import log output, overview of the data structure will be presented along with information about identified numeric / categorical 
 variables.
 
-
+<br/>
 > :warning: Be aware that only variables identified as of numeric type will be processed for other two modules. 
 
 ## DESCRIPTIVE STATISTICS AND IMPUTATION
@@ -58,17 +59,19 @@ Before running any of the imputation procedures, target variable needs to be sel
 
 ![plot](./pics/pic02.png)
 
+<br/>
 After selecting target variable, usually imputation procedures are run. 
 
 ![plot](./pics/pic03.png)
 
+<br/><br/>
 > :warning: Be aware that imputation procedures will create and add new risk factor to imported data set. Special case values imputation will add the new risk factor names 
             as ```selected risk factor + _sc_ + selected imputation method ```. Example: if user select risk factor age and mean as imputation method, new risk factor will be 
             added as age_sc_mean.
             The same procedure will run for outlier imputation adding new risk factor as  ```selected risk factor + _out_ + selected upper percentile + _ +  selected lower 
             percentile``` (e.g. age_out_0.99_0.01).
             Special attention should be paid when data set contains more risk factors, becasue final number of risk factors can increase significantly using imputations.
-
+<br/><br/>
 > :information_source: In case that imputation values cannot be calculated, download buttons will appear providing possibility to the user to download and check for which risk 
                        factors inputs are not defined properly (all special case values and special case values to be imputed). Both fields all special case values and special 
                        case values to be imputed should be defined as a list of numeric values (or values that can coerce to numeric including NA) separated by comma (,).
