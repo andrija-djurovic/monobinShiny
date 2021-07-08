@@ -105,10 +105,10 @@ Fix of previous error (NaN added to NA in special case elements field - NA, NaN)
 
 > :information_source: In latest version (0.1.1) of ```monobin``` package that is available on github above problem is fixed.
                        Development (github) version can be installed using the following commands:                    
-> ```
-     library(devtools)
-     install_github("andrija-djurovic/monobin")
->```
+ ```
+>     library(devtools)
+>     install_github("andrija-djurovic/monobin")
+```
 
 ## Data checks and notifications
 As already stated, almost every reactive element of the application produce notification output (lower righ corner). Example of error notification for trying to import file other than .csv is
