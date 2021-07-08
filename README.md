@@ -96,10 +96,10 @@ Running the binning procedure will result in summary table of processed risk fac
             this is solved adding NaN if only NA is defined as the special case element.
             With new release of ```monobin``` package this will be fixed.**
            
-Example of error (only NA selected in special case elements):
+Example of error (only NA selected in special case elements field):
 ![plot](./pics/pic08.png)
 
-Fix of previous error (NaN added to NA as special case elements - NA, NaNA):
+Fix of previous error (NaN added to NA in special case elements field - NA, NaNA):
 ![plot](./pics/pic09.png)
 
 
