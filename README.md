@@ -74,7 +74,8 @@ After selecting target variable, usually imputation procedures are run.
                        case values to be imputed should be defined as a list of numeric values (or values that can coerce to numeric including NA) separated by comma (,).
             
 
-Ultimate goal of this module is to create report of descriptive statistics. Image below presents example of descriptive report. Details on calculated metrics can be found in help page of ```?desc.stat```.
+Ultimate goal of this module is to create report of descriptive statistics. Image below presents example of descriptive report. Details on calculated metrics can be found in 
+the help page of the function  ```desc.stat (?desc.stat)```.
 As it can be seen, user has a possibility to download descriptive statistics report as well as data set used for its creation. If imputation procedures are run, data set will contain added risk factors (.csv files).
 
 ![plot](./pics/pic04.png) 
