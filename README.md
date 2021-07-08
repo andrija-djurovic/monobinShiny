@@ -109,4 +109,10 @@ presented in the following image
 ![plot](./pics/pic07.png)
 
 Below is the list of data checks and notification implemented:
+1. if imported file has at least two numeric variables;
+2. if target variable is selected when running the imputation and report procedures;
+3. if risk factors are selected when running imputation and report procedures;
+5. if special case values are defined properly;
+6. if percentile bounds (upper and lower) for outlier imputation are defined properly;
+7. if numeric inputs for binning algorihts are defined properly.
 
