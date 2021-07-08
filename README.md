@@ -74,6 +74,7 @@ After selecting target variable, usually imputation procedures are run.
 > :information_source: In case that imputation values cannot be calculated, download buttons will appear providing possibility to the user to download and check for which risk 
                        factors inputs are not defined properly (all special case values and special case values to be imputed). Both fields all special case values and special 
                        case values to be imputed should be defined as a list of numeric values (or values that can coerce to numeric including NA) separated by comma (,).<br/>
+                       
 Ultimate goal of this module is to create report of descriptive statistics. Image below presents example of descriptive report. Details on calculated metrics can be found in 
 the help page of the function  ```desc.stat (?desc.stat)```.
 As it can be seen, user has a possibility to download descriptive statistics report as well as data set used for its creation. If imputation procedures are run, data set will contain added risk factors (.csv files).
@@ -107,7 +108,7 @@ Fix of previous error (NaN added to NA in special case elements field - NA, NaN)
                        ``` r
                         library(devtools)
                         install_github("andrija-djurovic/monobin")
-
+                        ```
 
 ## Data checks and notifications
 As already stated, almost every reactive element of the application produce notification output (lower righ corner). Example of error notification for trying to import file other than .csv is
