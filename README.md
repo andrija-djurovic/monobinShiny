@@ -85,18 +85,23 @@ Monotonic binning module reflects the main purpose of this package - interface t
 variable, then risk factors ready for binning (if imputation is performed, the list of available risk factors will contain newly created risk factors) and finally define 
 arguments of selected binning algorithm. Available binning algorithms are those implemented in ```monobin``` package.
 
-> :warning: **Recommendation is always to keep the defaulted special case elements, or if user considers only NA to supplement it with NaN (NA, NaN). This is due to the input 
-            check in  ```monobin``` package that will return an error in case of defining only NA as a special case (!is.numeric(NA)). For current version of ```monobinShiny``` 
-            this is solved adding NaN if only NA is defined as the special case element.
-            With new release of ```monobin``` package this will be fixed.**
-         
-         
-
 ![plot](./pics/pic05.png)
 
 Running the binning procedure will result in summary table of processed risk factors and transformed data set. Both outputs can be downloaded as .csv files.
 
 ![plot](./pics/pic06.png)
+
+> :warning: **Recommendation is always to keep the defaulted special case elements, or if user considers only NA to supplement it with NaN (NA, NaN). This is due to the input 
+            check in  ```monobin``` package that will return an error in case of defining only NA as a special case (!is.numeric(NA)). For current version of ```monobinShiny``` 
+            this is solved adding NaN if only NA is defined as the special case element.
+            With new release of ```monobin``` package this will be fixed.**
+           
+Example of error (only NA selected in special case elements):
+![plot](./pics/pic08.png)
+
+Fix of previous error (NaN added to NA as special case elements - NA, NaNA):
+![plot](./pics/pic09.png)
+
 
 ## Data checks and notifications
 As already stated, almost every reactive element of the application produce notification output (lower righ corner). Example of error notification for trying to import file other than .csv is
