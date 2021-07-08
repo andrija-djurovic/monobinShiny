@@ -16,6 +16,11 @@ User can install the released version of monobinShiny from [CRAN](https://CRAN.R
 ``` r
 install.packages("monobinShiny")
 ```
+Additionally, development version can be install using:
+ ```
+     library(devtools)
+     install_github("andrija-djurovic/monobinShiny")
+```
 
 ## How to start monobinShiny application?
 
