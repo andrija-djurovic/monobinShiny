@@ -3,7 +3,7 @@ This is an add-on package to the ```monobin``` package that simplifies its use. 
 rating models (PD, LGD, EAD) development. All functions handle both binary and continuous target variable. Missing values and other possible special values are treated 
 separately from so-called complete cases.
 
-```monobinSiny``` provides shiny-based user interface (UI) to monobin packaga and it can be especially handy for less experienced R user as well as for those who intend to 
+```monobinSiny``` provides shiny-based user interface (UI) to monobin packaga and it can be especially handy for less experienced R users as well as for those who intend to 
 perform quick scanning of numeric risk factors when building credit rating models. The additional functions implemented in ```monobinShiny``` that do no exist in ```monobin``` 
 package are descriptive statistics, special case and outliers imputation. The function descriptive statistics is exported and can be used in R sessions independently from the 
 user interface, while special case and outlier imputation functions are written to be used with shiny UI.
