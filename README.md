@@ -61,9 +61,9 @@ Before running any of the imputation procedures, target variable needs to be sel
 <br/>
 After selecting target variable, usually imputation procedures are run. 
 
-![plot](./pics/pic03.png)
+![plot](./pics/pic03.png) <br/>
 
-<br/>
+
 > :warning: Be aware that imputation procedures will create and add new risk factor to imported data set. Special case values imputation will add the new risk factor names 
             as ```selected risk factor + _sc_ + selected imputation method ```. Example: if user select risk factor age and mean as imputation method, new risk factor will be 
             added as age_sc_mean.
