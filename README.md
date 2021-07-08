@@ -108,7 +108,7 @@ Fix of previous error (NaN added to NA in special case elements field - NA, NaN)
 ![plot](./pics/pic09.png)
 
 
-> :information_source: In latest version of ```monobin``` package (0.1.1) that is available on [github](https://github.com/andrija-djurovic/monobin) above problem is fixed.
+> :information_source: In the latest version of ```monobin``` package (0.1.1) that is available on [github](https://github.com/andrija-djurovic/monobin) above problem is fixed.
                        Development (github) version can be installed and tested using the following commands:                    
  ```
      library(devtools)
