@@ -8,4 +8,3 @@ utils::globalVariables(c("cnt", "pct", "min", "p1", "p5", "p25", "p50", "avg", "
 			 "strong", "tagList", "textInput", "type", "uiOutput", "updateCheckboxInput",
 			 "updateSelectInput", "updateSelectizeInput", "verbatimTextOutput", "withProgress", "rv"))
 
-
