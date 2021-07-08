@@ -15,8 +15,8 @@ server <- function(input, output, session) {
 			 num.rf = rv$num.rf,
 			 module = "desc")
 		sync.m23(id = "monobin", 
-			  num.rf = rv$num.rf,
-			  module = "monobin")
+			 num.rf = rv$num.rf,
+			 module = "monobin")
 		rv$rf.imp <- NULL
 		rv$rf.out <- NULL
 		}, ignoreInit = TRUE)
