@@ -104,7 +104,7 @@ Fix of previous error (NaN added to NA in special case elements field - NA, NaN)
 
 
 > :information_source: In latest version (0.1.1) of ```monobin``` package that is available on github above problem is fixed.
-                       Development (github) version can be installed using the following commands:<br/>                      
+                       Development (github) version can be installed using the following commands:                    
  ```
      library(devtools)
      install_github("andrija-djurovic/monobin")
