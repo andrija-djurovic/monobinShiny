@@ -68,6 +68,9 @@ mb.server <- function(id) {
 	srv <- reactiveValues(summary.tbl = NULL, db.trans = NULL)
 	num.args <- c(5, 6, 7, 6, 7, 7)
 	names(num.args) <- monobin.algo
+	y.type.arg <- c(4, 3, 3, 4, 3, 3)
+	names(y.type.arg) <- monobin.algo
+
 
 	observeEvent(input$trg.select, {
 		rv$target.select.3 <- input$trg.select
@@ -117,6 +120,7 @@ mb.server <- function(id) {
 		})
 
 	observeEvent(input$bin.run, {
+		hide("monobin.div")
 		if	(is.null(isolate(rv$db)) | input$trg.select%in%c(" ", "No imported data.")) {
 			showNotification("No imported data or selected target variable.", 
 					     type = "error")
@@ -126,7 +130,7 @@ mb.server <- function(id) {
 			showNotification("Select risk factors first.", type = "error")
 			return(NULL)
 			}
-		bin.algo <- input$monobin.method
+		bin.algo <- isolate(input$monobin.method)
 		na <- num.args[bin.algo]
 		args.e <- lapply(1:na, function(i) isolate(input[[paste0("arg", i)]]))		
 		args.e <- lapply(args.e, function(x) ifelse(x%in%"NA", NA, x))
@@ -146,7 +150,17 @@ mb.server <- function(id) {
 			showNotification(num.inp[[2]], type = "error")
 			return(NULL)
 			}
-
+		y.type <- args.e[y.type.arg[bin.algo]]
+		if	(y.type == "bina") {
+			d <- isolate(rv$db)
+			y <- isolate(input$trg.select)
+			cond <- !sum(d[!is.na(d[, y]), y]%in%c(0, 1)) == length(d[!is.na(d[, y]), y])
+			if	(cond) {
+				msg <- "Target variable is not 0/1 variable."
+				showNotification(msg, type = "error")
+				return(NULL)
+				}
+			}
 		show("monobin.div")
 		output$monobin.tbl <- renderDT({
 			tbls <- withProgress(message = "Running the binning algorithm", 
