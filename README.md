@@ -92,14 +92,13 @@ Running the binning procedure will result in summary table of processed risk fac
 ![plot](./pics/pic06.png)
 
 > :warning: **Recommendation is always to keep the defaulted special case elements, or if user considers only NA to supplement it with NaN (NA, NaN). This is due to the input 
-            check in  ```monobin``` package that will return an error in case of defining only NA as a special case (!is.numeric(NA)). For current version of ```monobinShiny``` 
-            this is solved adding NaN if only NA is defined as the special case element.
+            check in  ```monobin``` package that will return an error in case of defining only NA as a special case (!is.numeric(NA)). 
             With new release of ```monobin``` package this will be fixed.**
            
 Example of error (only NA selected in special case elements field):
 ![plot](./pics/pic08.png)
 
-Fix of previous error (NaN added to NA in special case elements field - NA, NaNA):
+Fix of previous error (NaN added to NA in special case elements field - NA, NaN):
 ![plot](./pics/pic09.png)
 
 
