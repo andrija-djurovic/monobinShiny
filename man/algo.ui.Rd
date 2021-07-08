@@ -12,5 +12,3 @@ algo.ui(id)
 \description{
 Server side for monobin functions' inputs
 }
-
-
