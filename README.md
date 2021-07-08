@@ -72,7 +72,7 @@ After selecting target variable, usually imputation procedures are run.
 > :information_source: In case that imputation values cannot be calculated, download buttons will appear providing possibility to the user to download and check for which risk 
                        factors inputs are not defined properly (all special case values and special case values to be imputed). Both fields all special case values and special 
                        case values to be imputed should be defined as a list of numeric values (or values that can coerce to numeric including NA) separated by comma (,).
-            
+             
 
 Ultimate goal of this module is to create report of descriptive statistics. Image below presents example of descriptive report. Details on calculated metrics can be found in 
 the help page of the function  ```desc.stat (?desc.stat)```.
@@ -84,6 +84,10 @@ As it can be seen, user has a possibility to download descriptive statistics rep
 Monotonic binning module reflects the main purpose of this package - interface to ```monobin``` package. Similar to the previous module, user should first select the target 
 variable, then risk factors ready for binning (if imputation is performed, the list of available risk factors will contain newly created risk factors) and finally define 
 arguments of selected binning algorithm. Available binning algorithms are those implemented in ```monobin``` package.
+
+> :warning: **Recommendation is always to keep defaulted special case values, or if user considers only NA to supplement it with NaN (NA, NaN). This is due to input check in 
+             ```monobin``` package that will return error in case of defininf only NA as a special case (!is.numeric(NA)). With new release of ```monobin`` package this
+             will be fixed.***
 
 ![plot](./pics/pic05.png)
 
