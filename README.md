@@ -16,7 +16,7 @@ User can install the released version of monobinShiny from [CRAN](https://CRAN.R
 ``` r
 install.packages("monobinShiny")
 ```
-Additionally, development version can be install using:
+Additionally, development version can be installed using:
  ```
      library(devtools)
      install_github("andrija-djurovic/monobinShiny")
@@ -43,7 +43,7 @@ Following sections provide short description of the each module. <br/>
 > :information_source: Almost all reactive elements of the application results with a notification, so be aware of this as presented in the lower right corner.
 
 ## DATA MANAGER MODULE
-This module serves for data import: manual import browsing for a file (only .csv files accepted) or automatic import of ```gcd``` from ```monobin``` package (Import dummy 
+This module serves for data import: the manual import browsing for a file (only .csv files accepted) or the automatic import of ```gcd``` from ```monobin``` package (Import dummy 
 data).
 
 ![plot](./pics/pic01.png)
@@ -70,7 +70,7 @@ After selecting target variable, usually imputation procedures are run.
 
 
 > :warning: Be aware that imputation procedures will create and add new risk factor to imported data set. Special case values imputation will add the new risk factor names 
-            as ```selected risk factor + _sc_ + selected imputation method ```. Example: if user select risk factor age and mean as imputation method, new risk factor will be 
+            as ```selected risk factor + _sc_ + selected imputation method ```. Example: if user selects risk factor age and mean as imputation method, new risk factor will be 
             added as age_sc_mean.
             The same procedure will run for outlier imputation adding new risk factor as  ```selected risk factor + _out_ + selected upper percentile + _ +  selected lower 
             percentile``` (e.g. age_out_0.99_0.01).
