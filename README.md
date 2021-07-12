@@ -6,7 +6,7 @@ separately from so-called complete cases.
 ```monobinSiny``` provides shiny-based user interface (UI) to monobin packaga and it can be especially handy for less experienced R users as well as for those who intend to 
 perform quick scanning of numeric risk factors when building credit rating models. The additional functions implemented in ```monobinShiny``` that do no exist in ```monobin``` 
 package are: descriptive statistics, special case and outliers imputation. The function descriptive statistics is exported and can be used in R sessions independently from the 
-user interface, while special case and outlier imputation functions are written to be used with shiny UI.
+user interface, while the special case and the outlier imputation functions are written to be used with shiny UI.
 
 
 ## Installation
@@ -69,20 +69,23 @@ After selecting target variable, usually imputation procedures are run.
 ![plot](./pics/pic03.png) <br/> <br/>
 
 
-> :warning: Be aware that imputation procedures will create and add new risk factor to imported data set. Special case values imputation will add the new risk factor names 
-            as ```selected risk factor + _sc_ + selected imputation method ```. Example: if user selects risk factor age and mean as imputation method, new risk factor will be 
-            added as age_sc_mean.
-            The same procedure will run for outlier imputation adding new risk factor as  ```selected risk factor + _out_ + selected upper percentile + _ +  selected lower 
-            percentile``` (e.g. age_out_0.99_0.01).
-            Special attention should be paid when data set contains more risk factors, becasue final number of risk factors can increase significantly using imputations. <br/>
+> :warning: Be aware that imputation procedures will create and add a new risk factor to imported data set. The special case values imputation will add the new risk factor 
+            names as ```selected risk factor + _sc_ + selected imputation method ```. Example: if user selects risk factor age and mean as the imputation method, the new risk 
+            factor will be added as age_sc_mean.
+            The same procedure will run for the outlier imputation adding a new risk factor as  ```selected risk factor + _out_ + selected upper percentile + _ +  selected 
+            lower percentile``` (e.g. age_out_0.99_0.01).
+            Special attention should be paid when data set contains more risk factors, becasue final number of the risk factors can increase significantly using imputations. 
+            <br/>
             
-> :information_source: In case that imputation values cannot be calculated, download buttons will appear providing possibility to the user to download and check for which risk 
-                       factors inputs are not defined properly (all special case values and special case values to be imputed). Both fields all special case values and special 
-                       case values to be imputed should be defined as a list of numeric values (or values that can coerce to numeric including NA) separated by comma (,).<br/>
+> :information_source: In case that a imputation values cannot be calculated, download buttons will appear providing possibility to the user to download and check for which 
+                       risk factors inputs are not defined properly (all special case values and special case values to be imputed). Both fields, the all special case values 
+                       and the special case values to be imputed should be defined as a list of numeric values (or values that can coerce to numeric including NA) separated by 
+                       comma (,).<br/>
                        
 Ultimate goal of this module is to create report of descriptive statistics. Image below presents example of descriptive report. Details on calculated metrics can be found in 
 the help page of the function  ```desc.stat (?desc.stat)```.
-As it can be seen, user has a possibility to download descriptive statistics report as well as data set used for its creation. If imputation procedures are run, data set will contain added risk factors (.csv files).
+As it can be seen, user has a possibility to download the descriptive statistics report as well as data set used for its creation. If the imputation procedures are run, the 
+data set will contain added risk factors (.csv files).
 
 ![plot](./pics/pic04.png) 
 
