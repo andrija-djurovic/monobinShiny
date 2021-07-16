@@ -14,7 +14,7 @@ Description: This is an add-on package to the monobin package that simplifies it
 	    used in R sessions independently from the user interface, while special case and outlier imputation functions 
 	    are written to be used with shiny UI.
 License: GPL (>= 3)
-URL: www.github.com/andrija-djurovic/monobinShiny
+URL: https://github.com/andrija-djurovic/monobinShiny
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
