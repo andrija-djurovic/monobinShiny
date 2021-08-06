@@ -40,7 +40,7 @@ Application consists of the three modules:
 3. monotonic binning.
 
 Following sections provide short description of the each module. <br/>
-> :information_source: Almost all reactive elements of the application results with a notification, so be aware of this as presented in the lower right corner.
+> :information_source: Almost all reactive elements of the application result with a notification, so user should be aware of this as presented in the lower right corner.
 
 ## DATA MANAGER MODULE
 This module serves for data import: the manual import browsing for a file (only .csv files accepted) or the automatic import of ```gcd``` from ```monobin``` package (Import dummy 
