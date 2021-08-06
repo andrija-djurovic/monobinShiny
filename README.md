@@ -56,7 +56,7 @@ variables. <br/><br/>
 > :warning: Be aware that only variables identified as of numeric type will be processed for other two modules. 
 
 ## DESCRIPTIVE STATISTICS AND IMPUTATION
-This module covers the standard steps of univariate and part of bivariate analysis in model development supplemented by the simple options for imputation of special case values 
+This module covers the standard steps of univariate and part of bivariate analysis in model development supplemented by the simple options (mean or median) for imputation of special case values 
 and outlier imputation based on selected percentiles thresholds.<br/><br/>
 
 Before running any of the imputation procedures, target variable needs to be selected:
