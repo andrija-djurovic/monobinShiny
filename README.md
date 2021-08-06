@@ -102,8 +102,8 @@ Running the binning procedure will result in summary table of processed risk fac
 ![plot](./pics/pic06.png)
 
 ## Data checks and notifications
-As already stated, almost every reactive element of the application produces notification output (lower righ corner). Example of error notification for trying to import file other than .csv is
-presented in the following image
+As already stated, almost every reactive element of the application produces notification output (lower righ corner). Example of error notification for trying to import file 
+other than .csv is presented in the following image:
 
 ![plot](./pics/pic07.png)
 
