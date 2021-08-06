@@ -35,9 +35,9 @@ If the application is installed and started properly, the following should appea
 ![plot](./pics/pic00.png)
 
 Application consists of the three modules:
-1. data manager
-2. descriptive statistics and imputation
-3. monotonic binning
+1. data manager;
+2. descriptive statistics and imputation;
+3. monotonic binning.
 
 Following sections provide short description of the each module. <br/>
 > :information_source: Almost all reactive elements of the application results with a notification, so be aware of this as presented in the lower right corner.
