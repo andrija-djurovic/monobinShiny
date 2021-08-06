@@ -74,7 +74,7 @@ After selecting target variable, usually imputation procedures are run.
             factor will be added as age_sc_mean.
             The same procedure will run for the outlier imputation adding a new risk factor as  ```selected risk factor + _out_ + selected upper percentile + _ +  selected 
             lower percentile``` (e.g. age_out_0.99_0.01).
-            Special attention should be paid when data set contains more risk factors, because the final number of the risk factors can increase significantly using 
+            Special attention should be paid when data set contains more risk factors, because the final number of risk factors can increase significantly using 
             imputations. 
             <br/>
             
