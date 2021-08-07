@@ -1,5 +1,5 @@
 # monobinShiny
-This is an add-on package to the ```monobin``` package that simplifies its use. The goal of monobin is to perform monotonic binning of numeric risk factor in credit 
+This is an add-on package to the ```monobin``` package that simplifies its use. The goal of ```monobin``` is to perform monotonic binning of numeric risk factor in credit 
 rating models (PD, LGD, EAD) development. All functions handle both binary and continuous target variable. Missing values and other possible special values are treated 
 separately from so-called complete cases.
 
