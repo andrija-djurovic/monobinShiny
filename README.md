@@ -24,7 +24,7 @@ Additionally, development version can be installed using:
 
 ## How to start monobinShiny application?
 
-After installation, to start shiny application, just type:
+After installation, to start ```monobinShiny``` application, just type:
 
 ``` r
 suppressMessages(library(monobinShiny))
