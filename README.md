@@ -34,7 +34,7 @@ If the application is installed and started properly, the following should appea
 
 ![plot](./pics/pic00.png)
 
-Application consists of the three modules:
+The application consists of three modules:
 1. data manager;
 2. descriptive statistics and imputation;
 3. monotonic binning.
