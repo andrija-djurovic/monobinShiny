@@ -53,7 +53,7 @@ During the manual data import, set of checks are performed such as: file extensi
 If data are imported successfully, in <i>Data Import log</i> output, overview of the data structure will be presented along with information about identified numeric/categorical 
 variables. <br/><br/>
 
-> :warning: Be aware that only variables identified as of numeric type will be processed for other two modules. 
+> :warning: Be aware that only variables identified as of numeric type will be processed for the other two modules. 
 
 ## DESCRIPTIVE STATISTICS AND IMPUTATION
 This module covers the standard steps of univariate and part of bivariate analysis in model development supplemented by the simple options (mean or median) for imputation of special case values 
