@@ -107,7 +107,7 @@ file other than .csv is presented in the following image:
 
 ![plot](./pics/pic07.png)
 
-Below is the list of data checks and notification implemented:
+Below is the list of data checks implemented:
 1. if imported file has at least two numeric variables;
 2. if target variable is selected when running the imputation and report procedures;
 3. if risk factors are selected when running imputation and report procedures;
