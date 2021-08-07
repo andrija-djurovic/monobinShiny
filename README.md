@@ -39,7 +39,7 @@ The application consists of three modules:
 2. descriptive statistics and imputation;
 3. monotonic binning.
 
-Following sections provide short description of the each module. <br/>
+Following sections provide short descriptions of the each module. <br/>
 > :information_source: Almost all reactive elements of the application result with a notification, so user should be aware of this as presented in the lower right corner.
 
 ## DATA MANAGER MODULE
