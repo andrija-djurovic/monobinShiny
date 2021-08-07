@@ -78,7 +78,7 @@ After selecting target variable, usually imputation procedures are run.
             imputations. 
             <br/>
             
-> :information_source: In the case when a imputation values cannot be calculated, download buttons will appear providing possibility to the user to download and check for which 
+> :information_source: In the case when imputation values cannot be calculated, download buttons will appear providing possibility to the user to download and check for which 
                        risk factors inputs are not properly defined (all special case values and/or special case values to be imputed). Both fields, the all special case values 
                        and the special case values to be imputed should be defined as a list of numeric values (or values that can coerce to numeric including NA) separated by 
                        comma (,).<br/>
