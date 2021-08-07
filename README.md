@@ -64,7 +64,7 @@ Before running any of the imputation procedures, target variable needs to be sel
 ![plot](./pics/pic02.png)
 
 <br/>
-After selecting target variable, usually imputation procedures are run. 
+After selecting target variable, usually imputation procedures are run. The imputation procedures are not compulsory, therefore user can skip step and move to the next module.
 
 ![plot](./pics/pic03.png) <br/> <br/>
 
