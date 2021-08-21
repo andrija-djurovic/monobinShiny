@@ -1,5 +1,11 @@
-#' Descriptive statistics and imputation user interface module
+#' Descriptive statistics and imputation module - user interface 
 #'@param id Namespace id.
+#'@return No return value, called for descriptive statistics and imputation module user interface.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	di.ui(id = "desc.imputation")
+#' 	}
 #'@export
 di.ui <- function(id) {
 	ns <- NS(id)
@@ -116,8 +122,14 @@ di.ui <- function(id) {
 	)
 }
 
-#' Descriptive statistics and imputation server side module
+#' Descriptive statistics and imputation module - server side 
 #'@param id Namespace id.
+#'@return No return value, called for descriptive statistics and imputation module server side.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	di.server(id = "desc.imputation")
+#' 	}
 #'@export
 di.server <- function(id) {
 	moduleServer(id, function(input, output, session) {

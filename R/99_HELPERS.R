@@ -1,5 +1,17 @@
 #' cum.bin - monobin functions' inputs
 #'@param id Namespace id.
+#'@return No return value, called for user interface of the cum.bin - monobin functions' inputs.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	output$algo.args <- renderUI({tagList(switch(algo.select, "cum.bin" = cum.ui(id = id),
+#'								  "iso.bin" = iso.ui(id = id),
+#'								  "ndr.bin" = ndr.sts.ui(id = id),
+#'								  "sts.bin" = ndr.sts.ui(id = id),
+#'								  "pct.bin" = pct.ui(id = id),
+#'								  "woe.bin" = woe.ui(id = id)))
+#'			})	
+#' 	}
 #'@export
 cum.ui <- function(id) {
 	ns <- NS(id)
@@ -25,6 +37,18 @@ cum.ui <- function(id) {
 }
 #' iso.bin - monobin functions' inputs
 #'@param id Namespace id.
+#'@return No return value, called for user interface of the iso.bin - monobin functions' inputs.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	output$algo.args <- renderUI({tagList(switch(algo.select, "cum.bin" = cum.ui(id = id),
+#'								  "iso.bin" = iso.ui(id = id),
+#'								  "ndr.bin" = ndr.sts.ui(id = id),
+#'								  "sts.bin" = ndr.sts.ui(id = id),
+#'								  "pct.bin" = pct.ui(id = id),
+#'								  "woe.bin" = woe.ui(id = id)))
+#'			})	
+#' 	}
 #'@export
 iso.ui <- function(id) {
 	ns <- NS(id)
@@ -55,6 +79,18 @@ iso.ui <- function(id) {
 }
 #' ndr.bin / sts.bin - monobin functions' inputs
 #'@param id Namespace id.
+#'@return No return value, called for user interface of the ndr.bin / sts.bin - monobin functions' inputs.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	output$algo.args <- renderUI({tagList(switch(algo.select, "cum.bin" = cum.ui(id = id),
+#'								  "iso.bin" = iso.ui(id = id),
+#'								  "ndr.bin" = ndr.sts.ui(id = id),
+#'								  "sts.bin" = ndr.sts.ui(id = id),
+#'								  "pct.bin" = pct.ui(id = id),
+#'								  "woe.bin" = woe.ui(id = id)))
+#'			})	
+#' 	}
 #'@export
 ndr.sts.ui <- function(id) {
 	ns <- NS(id)
@@ -90,6 +126,18 @@ ndr.sts.ui <- function(id) {
 }
 #' pct.bin - monobin functions' inputs
 #'@param id Namespace id.
+#'@return No return value, called for user interface of the pct.bin - monobin functions' inputs.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	output$algo.args <- renderUI({tagList(switch(algo.select, "cum.bin" = cum.ui(id = id),
+#'								  "iso.bin" = iso.ui(id = id),
+#'								  "ndr.bin" = ndr.sts.ui(id = id),
+#'								  "sts.bin" = ndr.sts.ui(id = id),
+#'								  "pct.bin" = pct.ui(id = id),
+#'								  "woe.bin" = woe.ui(id = id)))
+#'			})	
+#' 	}
 #'@export
 pct.ui <- function(id) {
 	ns <- NS(id)
@@ -119,6 +167,18 @@ pct.ui <- function(id) {
 }
 #' woe.bin - monobin functions' inputs
 #'@param id Namespace id.
+#'@return No return value, called for user interface of the woe.bin - monobin functions' inputs.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	output$algo.args <- renderUI({tagList(switch(algo.select, "cum.bin" = cum.ui(id = id),
+#'								  "iso.bin" = iso.ui(id = id),
+#'								  "ndr.bin" = ndr.sts.ui(id = id),
+#'								  "sts.bin" = ndr.sts.ui(id = id),
+#'								  "pct.bin" = pct.ui(id = id),
+#'								  "woe.bin" = woe.ui(id = id)))
+#'			})	
+#' 	}
 #'@export
 woe.ui <- function(id) {
 	ns <- NS(id)
@@ -154,6 +214,12 @@ woe.ui <- function(id) {
 }
 #' Server side for monobin functions' inputs
 #'@param id Namespace id.
+#'@return No return value, server side call for user interface of the selected binning algorithm.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	algo.ui(id = "monobin")
+#' 	}
 #'@export
 algo.ui <- function(id) {
 	moduleServer(id, function(input, output, session) {
@@ -173,6 +239,12 @@ algo.ui <- function(id) {
 }
 #' Check for categorical variables when importing the data
 #'@param tbl Imported data frame.
+#'@return Returns a character vector which describes variables type of imported data frame.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	check.msg <- check.vars(tbl = rv$db)
+#' 	}
 #'@export
 check.vars <- function(tbl) {
 	check <- !sapply(tbl, is.numeric)
@@ -184,23 +256,37 @@ check.vars <- function(tbl) {
 		msg <- paste0("Following variables identified as non-numeric:",
 				  cols, ".")
 		}
-return(msg)
+return(msg) 
 }
 #' Special cases - check input values
 #'@param x Numeric vector of special case values.
+#'@return Returns a list of three vectors: special case input(s) converted to numeric type, 
+#' number of special case input(s) that cannot be converted to 
+#' numeric type (including \code{NA}, \code{NaN} and \code{Inf}) and special case input(s) 
+#' that cannot be converted to numeric type.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	sca.check.res <- sc.check(x = input$sc.all)
+#' 	scr.check.res <- sc.check(x = input$sc.replace)
+#' 	}
+#'sc.check(x = "NA, NaN, Inf")
+#'sc.check(x = "NA, abc")
+#'sc.check(x = "NaN, abc")
+#'sc.check(x = "Inf, abc")
+#'sc.check(x = "9999999999, abc")
+#'sc.check(x = "NA, NaN, Inf, 9999999999")
 #'@export
 sc.check <- function(x) {
 	if	(""%in%x) {
 		return(list(NULL, 2, "Empty input field."))
 		}
-	if	(length(x) == 1) {
+	sc <- trimws(strsplit(x, ",")[[1]])
+	if	(length(sc) == 1) {
 		if	(is.na(x) | is.infinite(x)) {
 			return(list(x, 0, x))
 			}
-		}
-	sc <- strsplit(x, ",")[[1]]
-	if	(length(sc) == 1) {
-		if	(!sc%in%c("NA", "NaN") & suppressWarnings(is.na(as.numeric(sc)))) {
+		if	(!sc%in%c("NA", "NaN", "Inf") & suppressWarnings(is.na(as.numeric(sc)))) {
 			return(list(NULL, 2, sc))
 			}
 		}
@@ -208,15 +294,43 @@ sc.check <- function(x) {
 	check.01 <- is.na(sc.num) 
 	check.02 <- is.nan(sc.num)
 	check.99 <- check.01 & !check.02
-	check.indx <- sc[check.99]
-return(list(sc.num, sum(check.99), check.indx))
+	check.val <- sc[check.99]
+	if	(length(check.val) > 0) {
+		if	(length(check.val) == 1) {
+			if	(check.val != "NA") {
+				check.sum <- 2
+				} else {
+				check.sum <- 1
+				}
+			} else {
+			check.sum <- sum(check.99)
+			}
+		} else {
+		check.sum <- 0
+		}
+return(list(sc.num, check.sum, check.val))
 }
-#' Special case - imputation
+#' Special case imputation
 #'@param tbl Data frame with risk factors ready for imputation.
 #'@param rf Vector of risk factors to be imputed.
 #'@param sc Numeric vector of special case values.
 #'@param sc.replace Numeric vector of special case values that are selected for imputation.
 #'@param imp.method Imputation method (mean or median).
+#'@return Returns a list of three elements. The first element is a data frame with imputed values,
+#' the second element is a vector of newly created risk factors (with imputed values) and the third one is 
+#' a data frame with information about possible imputation errors.
+#'
+#'@examples
+#' if 	(interactive()) {
+#'		imp.res <- suppressWarnings(
+#'			     sc.impute(tbl = rv$db, 
+#'					   rf = rf, 
+#'					   sc = sca.check.res[[1]],
+#'					   sc.replace = scr.check.res[[1]], 
+#'					   imp.method = imp.method)
+#'				)
+#' 	}
+#'
 #'@export
 sc.impute <- function(tbl, rf, sc, sc.replace, imp.method) {
 	rfl <- length(rf)
@@ -251,12 +365,27 @@ sc.impute <- function(tbl, rf, sc, sc.replace, imp.method) {
 	info.tbl <- bind_rows(info.tbl)	
 return(list(tbl, rf.imp = rfn.f, info = data.frame(info.tbl)))
 }
-#' Outliers - imputation
+#' Outliers imputation
 #'@param tbl Data frame with risk factors ready for imputation.
 #'@param rf Vector of risk factors to be imputed.
 #'@param ub Upper bound percentiles.
 #'@param lb Lower bound percentiles.
 #'@param sc Numeric vector of special case values.
+#'@return Returns a list of three elements. The first element is a data frame with imputed values,
+#' the second element is a vector of newly created risk factors (with imputed values) and the third one is 
+#' a data frame with information about possible imputation errors.
+#'
+#'@examples
+#' if 	(interactive()) {
+#'		imp.res <-  suppressWarnings(
+#'				out.impute(tbl = rv$db, 		
+#'					    rf = input$rf.out,
+#'					    ub = upper.pct,
+#'					    lb = lower.pct,
+#'					    sc = sca.check.res[[1]])
+#'				)
+#' 	}
+#'
 #'@export
 out.impute <- function(tbl, rf, ub, lb, sc) {
 	rfl <- length(rf)
@@ -298,10 +427,24 @@ return(list(tbl, rf.imp = rfn.f, info = data.frame(info.tbl)))
 }
 #' Descriptive statistics report
 #'@param target Selected target.
-#'@param rf  Vector of selected numeric risk factors.
+#'@param rf  Vector of a selected numeric risk factors.
 #'@param sc Numeric vector of special case values.
 #'@param sc.method Define how special cases will be treated, all together or in separate bins.
 #'@param db Data frame of target and numeric risk factors.
+#'@return Returns a data frame with descriptive statistics for the selected risk drivers.
+#'
+#'@examples
+#' if 	(interactive()) {
+#'		srv$desc.stat <-  withProgress(message = "Running descriptive statistics report", 
+#'							 value = 0, {
+#'					desc.report(target = "qual", 
+#'							rf = rf, 
+#'							sc = sc, 
+#'							sc.method = sc.method, 
+#'							db = isolate(rv$db))
+#'					})
+#' 	}
+#'
 #'@export
 desc.report <- function(target, rf, sc, sc.method, db) {
 	y <- db[, target]
@@ -325,6 +468,14 @@ return(res)
 }
 #' Numeric arguments - monobin module
 #'@param x Binning algorithm from monobin package.
+#'@return Returns a list of two vectors: index and UI element label of numeric arguments of 
+#' the selected monobin function.
+#'@examples
+#' if 	(interactive()) {
+#'		inp.indx <- num.inputs(x = x)
+#' 	}
+#' num.inputs(x = "cum.bin")
+#'
 #'@export
 num.inputs <- function(x) {
 	switch(x, 
@@ -345,7 +496,14 @@ num.inputs <- function(x) {
 }
 #' Check for numeric arguments - monobin module
 #'@param x Binning algorithm from monobin package.
-#'@param args.e Argument elements of selected monobin function.
+#'@param args.e Argument elements of the selected monobin function.
+#'@return Returns a list of two vectors: logical if validation is successful and character vector
+#' with validation message.
+#'@examples
+#' if 	(interactive()) {
+#'		num.inp <- mono.inputs.check(x = bin.algo, args.e = args.e)
+#' 	}
+#'
 #'@export
 mono.inputs.check <- function(x, args.e) {
 	inp.indx <- num.inputs(x = x)
@@ -384,8 +542,16 @@ mono.inputs.check <- function(x, args.e) {
 		}
 return(list(check.ok = TRUE, msg = "Inputs validated."))
 }
-#' Evaluation expression of selected monobin function and its arguments
+#' Evaluation expression of the selected monobin function and its arguments
 #'@param x Binning algorithm from monobin package.
+#'@return Returns an evaluation expression of the selected monobin algorithm.
+#'@examples
+#' if 	(interactive()) {
+#'		expr.eval <- monobin.fun(x = algo)
+#' 	}
+#' monobin.fun(x = "ndr.bin")
+#'
+#'
 #'@export
 monobin.fun <- function(x) {
 	switch(x, 
@@ -414,13 +580,30 @@ monobin.fun <- function(x) {
 					   woe.gap = args.e[[6]], force.trend = args.e[[7]])")
 
 }
-#' Run monobin algorithm for selected inputs
+#' Run monobin algorithm for the selected inputs
 #'@param algo Binning algorithm from monobin package.
 #'@param target.n Selected target.
-#'@param rf Vector of selected numeric risk factors.
+#'@param rf Vector of a selected numeric risk factors.
 #'@param sc Numeric vector of special case values.
-#'@param args.e Argument elements of selected monobin function.
+#'@param args.e Argument elements of the selected monobin function.
 #'@param db Data frame of target and numeric risk factors.
+#'@return Returns a list of two data frame. The first data frame contains the results of implemented 
+#' binning algorithm, while the second one contains transformed risk factors.
+#'@examples
+#' if 	(interactive()) {
+#'		tbls <- withProgress(message = "Running the binning algorithm", 
+#'						   value = 0, {
+#'				  	  suppressWarnings(
+#'				  	  monobin.run(algo = bin.algo, 
+#'							  target.n = isolate(input$trg.select), 
+#'							  rf = isolate(input$rf.select), 
+#'							  sc = scr.check.res[[1]], 
+#'							  args.e = args.e, 
+#'							  db = isolate(rv$db))
+#'			  )})
+#'
+#' 	}
+#'
 #'@export
 monobin.run <- function(algo, target.n, rf, sc, args.e, db) {
 	target <- db[, target.n]

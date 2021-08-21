@@ -1,5 +1,11 @@
-#' Monobin user interface module
+#' Monobin module - user interface 
 #'@param id Namespace id.
+#'@return No return value, called for monobin module user interface.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	mb.ui(id = "monobin")
+#' 	}
 #'@export
 mb.ui <- function(id) {
 	ns <- NS(id)
@@ -59,8 +65,14 @@ mb.ui <- function(id) {
 	)
 }
 
-#' Monobin server side module
+#' Monobin module - server side 
 #'@param id Namespace id.
+#'@return No return value, called for monobin module server side.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	mb.server(id = "monobin")
+#' 	}
 #'@export
 mb.server <- function(id) {
 	moduleServer(id, function(input, output, session) {

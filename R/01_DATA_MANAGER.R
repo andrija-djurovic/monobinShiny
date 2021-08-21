@@ -1,5 +1,11 @@
-#' Data manager user interface module
+#' Data manager module - user interface 
 #'@param id Namespace id.
+#'@return No return value, called for data manager module user interface.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	dm.ui(id = "data.manager")
+#' 	}
 #'@export
 dm.ui <- function(id) {
 	ns <- NS(id)
@@ -27,8 +33,14 @@ dm.ui <- function(id) {
 	)
 }
 
-#' Data manager server side module
+#' Data manager module - server side
 #'@param id Namespace id.
+#'@return No return value, called for data manager module server side.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	dm.server(id = "data.manager")
+#' 	}
 #'@export
 dm.server <- function(id) {
 	moduleServer(id, function(input, output, session) {

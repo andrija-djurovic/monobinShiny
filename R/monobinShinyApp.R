@@ -1,4 +1,5 @@
-#' Start shiny UI for monobin package
+#' Starts shiny application for monobin package
+#'@return Starts shiny application for monobin package.
 #'@examples
 #' if 	(interactive()) {
 #' 	suppressMessages(library(monobinShiny))	
