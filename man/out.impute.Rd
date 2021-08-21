@@ -2,7 +2,7 @@
 % Please edit documentation in R/99_HELPERS.R
 \name{out.impute}
 \alias{out.impute}
-\title{Outliers - imputation}
+\title{Outliers imputation}
 \usage{
 out.impute(tbl, rf, ub, lb, sc)
 }
@@ -17,6 +17,23 @@ out.impute(tbl, rf, ub, lb, sc)
 
 \item{sc}{Numeric vector of special case values.}
 }
+\value{
+Returns a list of three elements. The first element is a data frame with imputed values,
+the second element is a vector of newly created risk factors (with imputed values) and the third one is
+a data frame with information about possible imputation errors.
+}
 \description{
-Outliers - imputation
+Outliers imputation
+}
+\examples{
+if 	(interactive()) {
+	imp.res <-  suppressWarnings(
+			out.impute(tbl = rv$db, 		
+				    rf = input$rf.out,
+				    ub = upper.pct,
+				    lb = lower.pct,
+				    sc = sca.check.res[[1]])
+			)
+	}
+
 }

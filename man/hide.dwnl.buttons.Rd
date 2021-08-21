@@ -9,6 +9,16 @@ hide.dwnl.buttons(id)
 \arguments{
 \item{id}{Namespace id.}
 }
+\value{
+No return value, called in order to hide download buttons (imp.div and out.div) from descriptive statistics module.
+}
 \description{
 Hide download buttons from descriptive statistics module
+}
+\examples{
+if 	(interactive()) {
+observeEvent(rv$dwnl.sync, {
+	hide.dwnl.buttons(id = "desc.imputation")
+	}, ignoreInit = TRUE)
+	}
 }

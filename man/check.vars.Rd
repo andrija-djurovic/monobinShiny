@@ -9,6 +9,14 @@ check.vars(tbl)
 \arguments{
 \item{tbl}{Imported data frame.}
 }
+\value{
+Returns a character vector which describes variables type of imported data frame.
+}
 \description{
 Check for categorical variables when importing the data
+}
+\examples{
+if 	(interactive()) {
+	check.msg <- check.vars(tbl = rv$db)
+	}
 }

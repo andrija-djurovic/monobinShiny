@@ -2,12 +2,15 @@
 % Please edit documentation in R/monobinShinyApp.R
 \name{monobinShinyApp}
 \alias{monobinShinyApp}
-\title{Start shiny UI for monobin package}
+\title{Starts shiny application for monobin package}
 \usage{
 monobinShinyApp()
 }
+\value{
+Starts shiny application for monobin package.
+}
 \description{
-Start shiny UI for monobin package
+Starts shiny application for monobin package
 }
 \examples{
 if 	(interactive()) {

@@ -2,13 +2,21 @@
 % Please edit documentation in R/02_DESC_IMPUT.R
 \name{di.ui}
 \alias{di.ui}
-\title{Descriptive statistics and imputation user interface module}
+\title{Descriptive statistics and imputation module - user interface}
 \usage{
 di.ui(id)
 }
 \arguments{
 \item{id}{Namespace id.}
 }
+\value{
+No return value, called for descriptive statistics and imputation module user interface.
+}
 \description{
-Descriptive statistics and imputation user interface module
+Descriptive statistics and imputation module - user interface
+}
+\examples{
+if 	(interactive()) {
+	di.ui(id = "desc.imputation")
+	}
 }

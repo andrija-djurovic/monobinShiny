@@ -19,6 +19,26 @@ monobin.run(algo, target.n, rf, sc, args.e, db)
 
 \item{db}{Data frame of target and numeric risk factors.}
 }
+\value{
+Returns a list of two data frame. The first data frame contains the results of implemented
+binning algorithm, while the second one contains transformed risk factors.
+}
 \description{
 Run monobin algorithm for selected inputs
+}
+\examples{
+if 	(interactive()) {
+	tbls <- withProgress(message = "Running the binning algorithm", 
+					   value = 0, {
+			  	  suppressWarnings(
+			  	  monobin.run(algo = bin.algo, 
+						  target.n = isolate(input$trg.select), 
+						  rf = isolate(input$rf.select), 
+						  sc = scr.check.res[[1]], 
+						  args.e = args.e, 
+						  db = isolate(rv$db))
+		  )})
+
+	}
+
 }

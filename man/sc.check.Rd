@@ -9,6 +9,24 @@ sc.check(x)
 \arguments{
 \item{x}{Numeric vector of special case values.}
 }
+\value{
+Returns a list of three vectors: special case input(s) converted to numeric type,
+number of special case input(s) that cannot be converted to
+numeric type (including \code{NA}, \code{NaN} and \code{Inf}) and special case input(s)
+that cannot be converted to numeric type.
+}
 \description{
 Special cases - check input values
+}
+\examples{
+if 	(interactive()) {
+	sca.check.res <- sc.check(x = input$sc.all)
+	scr.check.res <- sc.check(x = input$sc.replace)
+	}
+sc.check(x = "NA, NaN, Inf")
+sc.check(x = "NA, abc")
+sc.check(x = "NaN, abc")
+sc.check(x = "Inf, abc")
+sc.check(x = "9999999999, abc")
+sc.check(x = "NA, NaN, Inf, 9999999999")
 }

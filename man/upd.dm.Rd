@@ -2,7 +2,7 @@
 % Please edit documentation in R/99_SYNC.R
 \name{upd.dm}
 \alias{upd.dm}
-\title{Update data manager output}
+\title{Update data manager UI output}
 \usage{
 upd.dm(id, dummy)
 }
@@ -11,6 +11,16 @@ upd.dm(id, dummy)
 
 \item{dummy}{A logical value indicating whether gcd data (from monobin package) or specific csv file are imported.}
 }
+\value{
+No return value, called in order to update data manager UI output after data import.
+}
 \description{
-Update data manager output
+Update data manager UI output
+}
+\examples{
+if 	(interactive()) {
+observeEvent(rv$dm.uptd, {
+	upd.dm(id = "data.manager", dummy = rv$import.dummy)
+	}, ignoreInit = TRUE)
+	}
 }

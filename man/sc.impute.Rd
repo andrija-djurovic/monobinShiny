@@ -2,7 +2,7 @@
 % Please edit documentation in R/99_HELPERS.R
 \name{sc.impute}
 \alias{sc.impute}
-\title{Special case - imputation}
+\title{Special case imputation}
 \usage{
 sc.impute(tbl, rf, sc, sc.replace, imp.method)
 }
@@ -17,6 +17,23 @@ sc.impute(tbl, rf, sc, sc.replace, imp.method)
 
 \item{imp.method}{Imputation method (mean or median).}
 }
+\value{
+Returns a list of three elements. The first element is a data frame with imputed values,
+the second element is a vector of newly created risk factors (with imputed values) and the third one is
+a data frame with information about possible imputation errors.
+}
 \description{
-Special case - imputation
+Special case imputation
+}
+\examples{
+if 	(interactive()) {
+	imp.res <- suppressWarnings(
+		     sc.impute(tbl = rv$db, 
+				   rf = rf, 
+				   sc = sca.check.res[[1]],
+				   sc.replace = scr.check.res[[1]], 
+				   imp.method = imp.method)
+			)
+	}
+
 }

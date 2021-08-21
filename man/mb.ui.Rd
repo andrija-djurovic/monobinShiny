@@ -2,13 +2,21 @@
 % Please edit documentation in R/03_MONOBIN.R
 \name{mb.ui}
 \alias{mb.ui}
-\title{Monobin user interface module}
+\title{Monobin module - user interface}
 \usage{
 mb.ui(id)
 }
 \arguments{
 \item{id}{Namespace id.}
 }
+\value{
+No return value, called for monobin module user interface.
+}
 \description{
-Monobin user interface module
+Monobin module - user interface
+}
+\examples{
+if 	(interactive()) {
+	mb.ui(id = "monobin")
+	}
 }

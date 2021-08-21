@@ -2,13 +2,21 @@
 % Please edit documentation in R/03_MONOBIN.R
 \name{mb.server}
 \alias{mb.server}
-\title{Monobin server side module}
+\title{Monobin module - server side}
 \usage{
 mb.server(id)
 }
 \arguments{
 \item{id}{Namespace id.}
 }
+\value{
+No return value, called for monobin module server side.
+}
 \description{
-Monobin server side module
+Monobin module - server side
+}
+\examples{
+if 	(interactive()) {
+	mb.server(id = "monobin")
+	}
 }

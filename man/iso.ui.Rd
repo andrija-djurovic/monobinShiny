@@ -9,6 +9,20 @@ iso.ui(id)
 \arguments{
 \item{id}{Namespace id.}
 }
+\value{
+No return value, called for user interface of the iso.bin - monobin functions' inputs.
+}
 \description{
 iso.bin - monobin functions' inputs
+}
+\examples{
+if 	(interactive()) {
+	output$algo.args <- renderUI({tagList(switch(algo.select, "cum.bin" = cum.ui(id = id),
+							  "iso.bin" = iso.ui(id = id),
+							  "ndr.bin" = ndr.sts.ui(id = id),
+							  "sts.bin" = ndr.sts.ui(id = id),
+							  "pct.bin" = pct.ui(id = id),
+							  "woe.bin" = woe.ui(id = id)))
+		})	
+	}
 }

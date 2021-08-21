@@ -2,13 +2,21 @@
 % Please edit documentation in R/01_DATA_MANAGER.R
 \name{dm.server}
 \alias{dm.server}
-\title{Data manager server side module}
+\title{Data manager module - server side}
 \usage{
 dm.server(id)
 }
 \arguments{
 \item{id}{Namespace id.}
 }
+\value{
+No return value, called for data manager module server side.
+}
 \description{
-Data manager server side module
+Data manager module - server side
+}
+\examples{
+if 	(interactive()) {
+	dm.server(id = "data.manager")
+	}
 }

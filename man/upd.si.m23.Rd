@@ -2,7 +2,7 @@
 % Please edit documentation in R/99_SYNC.R
 \name{upd.si.m23}
 \alias{upd.si.m23}
-\title{Update sync between descriptive statistics and monobin module}
+\title{Sync between descriptive statistics and monobin module}
 \usage{
 upd.si.m23(upd.rf, num.rf, session)
 }
@@ -11,8 +11,18 @@ upd.si.m23(upd.rf, num.rf, session)
 
 \item{num.rf}{Vector of updated numeric risk factors.}
 
-\item{session}{Session object .}
+\item{session}{Session object.}
+}
+\value{
+No return value, called in order to sync between descriptive statistics and monobin modules' UI elements after imputation procedures.
 }
 \description{
-Update sync between descriptive statistics and monobin module
+Sync between descriptive statistics and monobin module
+}
+\examples{
+if 	(interactive()) {
+upd.si.m23(upd.rf = upd.rf, 
+	    num.rf = num.rf, 	
+	    session = session)
+	}
 }

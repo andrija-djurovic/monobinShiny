@@ -17,6 +17,22 @@ desc.report(target, rf, sc, sc.method, db)
 
 \item{db}{Data frame of target and numeric risk factors.}
 }
+\value{
+Returns a data frame with descriptive statistics for selected risk drivers.
+}
 \description{
 Descriptive statistics report
+}
+\examples{
+if 	(interactive()) {
+	srv$desc.stat <-  withProgress(message = "Running descriptive statistics report", 
+						 value = 0, {
+				desc.report(target = "qual", 
+						rf = rf, 
+						sc = sc, 
+						sc.method = sc.method, 
+						db = isolate(rv$db))
+				})
+	}
+
 }

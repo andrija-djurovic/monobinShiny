@@ -13,6 +13,23 @@ sync.m23(id, num.rf, module)
 
 \item{module}{Descriptive statistic or monobin module.}
 }
+\value{
+No return value, called in order to sync between descriptive statistics and monobin modules' UI elements after data import.
+}
 \description{
 Sync between descriptive statistics and monobin module after data import
+}
+\examples{
+if 	(interactive()) {
+observeEvent(rv$sync, {
+	sync.m23(id = "desc.imputation", 
+		 num.rf = rv$num.rf,
+		 module = "desc")
+	sync.m23(id = "monobin", 
+		 num.rf = rv$num.rf,
+		 module = "monobin")
+	rv$rf.imp <- NULL
+	rv$rf.out <- NULL
+	}, ignoreInit = TRUE)
+	}
 }

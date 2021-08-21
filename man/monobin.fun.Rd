@@ -9,6 +9,17 @@ monobin.fun(x)
 \arguments{
 \item{x}{Binning algorithm from monobin package.}
 }
+\value{
+Returns an evaluation expression of selected monobin algorithm.
+}
 \description{
 Evaluation expression of selected monobin function and its arguments
+}
+\examples{
+if 	(interactive()) {
+	expr.eval <- monobin.fun(x = algo)
+	}
+monobin.fun(x = "ndr.bin")
+
+
 }

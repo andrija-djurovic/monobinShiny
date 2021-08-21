@@ -2,13 +2,21 @@
 % Please edit documentation in R/02_DESC_IMPUT.R
 \name{di.server}
 \alias{di.server}
-\title{Descriptive statistics and imputation server side module}
+\title{Descriptive statistics and imputation module - server side}
 \usage{
 di.server(id)
 }
 \arguments{
 \item{id}{Namespace id.}
 }
+\value{
+No return value, called for descriptive statistics and imputation module server side.
+}
 \description{
-Descriptive statistics and imputation server side module
+Descriptive statistics and imputation module - server side
+}
+\examples{
+if 	(interactive()) {
+	di.server(id = "desc.imputation")
+	}
 }

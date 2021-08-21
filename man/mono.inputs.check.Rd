@@ -11,6 +11,17 @@ mono.inputs.check(x, args.e)
 
 \item{args.e}{Argument elements of selected monobin function.}
 }
+\value{
+Returns a list of two vectors: logical if validation is successful and character vector
+with validation message.
+}
 \description{
 Check for numeric arguments - monobin module
+}
+\examples{
+if 	(interactive()) {
+	num.inp <- mono.inputs.check(x = bin.algo, args.e = args.e)
+	}
+num.inputs(x = "cum.bin")
+
 }

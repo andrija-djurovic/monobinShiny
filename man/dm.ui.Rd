@@ -2,13 +2,21 @@
 % Please edit documentation in R/01_DATA_MANAGER.R
 \name{dm.ui}
 \alias{dm.ui}
-\title{Data manager user interface module}
+\title{Data manager module - user interface}
 \usage{
 dm.ui(id)
 }
 \arguments{
 \item{id}{Namespace id.}
 }
+\value{
+No return value, called for data manager module user interface.
+}
 \description{
-Data manager user interface module
+Data manager module - user interface
+}
+\examples{
+if 	(interactive()) {
+	dm.ui(id = "data.manager")
+	}
 }

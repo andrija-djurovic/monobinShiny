@@ -9,6 +9,17 @@ num.inputs(x)
 \arguments{
 \item{x}{Binning algorithm from monobin package.}
 }
+\value{
+Returns a list of two vectors: index and UI element label of numeric arguments of
+selected monobin function.
+}
 \description{
 Numeric arguments - monobin module
+}
+\examples{
+if 	(interactive()) {
+	inp.indx <- num.inputs(x = x)
+	}
+num.inputs(x = "cum.bin")
+
 }

@@ -9,6 +9,14 @@ algo.ui(id)
 \arguments{
 \item{id}{Namespace id.}
 }
+\value{
+No return value, server side call for user interface of the selected binning algorithm.
+}
 \description{
 Server side for monobin functions' inputs
+}
+\examples{
+if 	(interactive()) {
+	algo.ui(id = "monobin")
+	}
 }
