@@ -1,11 +1,8 @@
 #' @importFrom utils globalVariables
-utils::globalVariables(c("cnt", "pct", "min", "p1", "p5", "p25", "p50", "avg", "avg.se", "p75", "p95", 
-			 "p99", "max", "neg", "pos", "cnt.outliers", "monotonicity",
-			 "HTML", "NS", "a", "actionButton", "bin", "br", "checkboxInput", "column", "div", "downloadButton",
-			 "downloadHandler", "fileInput", "fluidRow", "gcd", "incProgress", "isolate",
-			 "moduleServer", "monobin.algo", "numericInput", "observeEvent", "p", "reactiveValues",
-			 "renderPrint", "renderUI", "selectInput", "selectizeInput", "showNotification",
-			 "strong", "tagList", "textInput", "type", "uiOutput", "updateCheckboxInput",
-			 "updateSelectInput", "updateSelectizeInput", "verbatimTextOutput", "withProgress", "rv"))
+utils::globalVariables(c(".", "bin.type", "complete.cases", "dist.b", "dist.g", "glm", "iv.b", "nb", "ng", "no",
+			 "pct", "predict", "sb", "sg", "woe", "combn", "cor", "cutree", "dist", "group", "label",
+			 "label.y", "pchisq", "pnorm", "xtabs", "as.dist", "reg.tree", "segment", "mpred",
+			 "nb.obs", "nb.mod", "dr.mod", "dr.obs"))
 
 
+    
