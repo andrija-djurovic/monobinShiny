@@ -1,3 +1,51 @@
+#' mdt.bin - monobin functions' inputs
+#'@param id Namespace id.
+#'@return No return value, called for user interface of the iso.bin - monobin functions' inputs.
+#'
+#'@examples
+#' if 	(interactive()) {
+#' 	output$algo.args <- renderUI({tagList(switch(algo.select, "cum.bin" = cum.ui(id = id),
+#'								  "iso.bin" = iso.ui(id = id),
+#'								  "ndr.bin" = ndr.sts.ui(id = id),
+#'								  "sts.bin" = ndr.sts.ui(id = id),
+#'								  "pct.bin" = pct.ui(id = id),
+#'								  "woe.bin" = woe.ui(id = id),
+#'							          "mdt.bin" = mdt.ui(id = id)))
+#'			})	
+#' 	}
+#'@export
+mdt.ui <- function(id) {
+	ns <- NS(id)
+	column(12, 
+	textInput(inputId = ns("arg1"),
+		    label = "Special case elements",
+		    value = "NA, NaN, Inf"),
+	numericInput(inputId = ns("arg2"),
+			 label = "Number of splitting groups for each node",
+			 value = 50,
+			 min = 2,
+			 max = 150),
+	selectInput(inputId = ns("arg3"),
+			label = "How to treat special cases?",
+			choices = c("together", "separately")),
+	selectInput(inputId = ns("arg4"),
+			label = "Type of target variable",
+			choices = c(NA, "bina", "cont")),
+	numericInput(inputId = ns("arg5"),
+			 label = "Minimum pct. of observations per bin",
+			 value = 0.05,
+			 min = 0,
+			 max = 1),
+	numericInput(inputId = ns("arg6"),
+			 label = "Minimum avg. target rate per bin",
+			 value = 0.01,
+			 min = 0,
+			 max = 1),
+	selectInput(inputId = ns("arg7"),
+			label = "Force trend",
+			choices = c(NA, "i", "d"))
+	)
+}
 #' cum.bin - monobin functions' inputs
 #'@param id Namespace id.
 #'@return No return value, called for user interface of the cum.bin - monobin functions' inputs.
@@ -9,7 +57,8 @@
 #'								  "ndr.bin" = ndr.sts.ui(id = id),
 #'								  "sts.bin" = ndr.sts.ui(id = id),
 #'								  "pct.bin" = pct.ui(id = id),
-#'								  "woe.bin" = woe.ui(id = id)))
+#'								  "woe.bin" = woe.ui(id = id),
+#'							          "mdt.bin" = mdt.ui(id = id)))
 #'			})	
 #' 	}
 #'@export
@@ -46,7 +95,8 @@ cum.ui <- function(id) {
 #'								  "ndr.bin" = ndr.sts.ui(id = id),
 #'								  "sts.bin" = ndr.sts.ui(id = id),
 #'								  "pct.bin" = pct.ui(id = id),
-#'								  "woe.bin" = woe.ui(id = id)))
+#'								  "woe.bin" = woe.ui(id = id),
+#'							          "mdt.bin" = mdt.ui(id = id)))
 #'			})	
 #' 	}
 #'@export
@@ -88,7 +138,8 @@ iso.ui <- function(id) {
 #'								  "ndr.bin" = ndr.sts.ui(id = id),
 #'								  "sts.bin" = ndr.sts.ui(id = id),
 #'								  "pct.bin" = pct.ui(id = id),
-#'								  "woe.bin" = woe.ui(id = id)))
+#'								  "woe.bin" = woe.ui(id = id),
+#'							          "mdt.bin" = mdt.ui(id = id)))
 #'			})	
 #' 	}
 #'@export
@@ -135,7 +186,8 @@ ndr.sts.ui <- function(id) {
 #'								  "ndr.bin" = ndr.sts.ui(id = id),
 #'								  "sts.bin" = ndr.sts.ui(id = id),
 #'								  "pct.bin" = pct.ui(id = id),
-#'								  "woe.bin" = woe.ui(id = id)))
+#'								  "woe.bin" = woe.ui(id = id),
+#'							          "mdt.bin" = mdt.ui(id = id)))
 #'			})	
 #' 	}
 #'@export
@@ -176,7 +228,8 @@ pct.ui <- function(id) {
 #'								  "ndr.bin" = ndr.sts.ui(id = id),
 #'								  "sts.bin" = ndr.sts.ui(id = id),
 #'								  "pct.bin" = pct.ui(id = id),
-#'								  "woe.bin" = woe.ui(id = id)))
+#'								  "woe.bin" = woe.ui(id = id),
+#'							          "mdt.bin" = mdt.ui(id = id)))
 #'			})	
 #' 	}
 #'@export
@@ -232,7 +285,8 @@ algo.ui <- function(id) {
 					   "ndr.bin" = ndr.sts.ui(id = id),
 					   "sts.bin" = ndr.sts.ui(id = id),
 					   "pct.bin" = pct.ui(id = id),
-					   "woe.bin" = woe.ui(id = id)))
+					   "woe.bin" = woe.ui(id = id),
+					   "mdt.bin" = mdt.ui(id = id)))
 			})	
 		})
 	})
@@ -281,7 +335,11 @@ sc.check <- function(x) {
 	if	(""%in%x) {
 		return(list(NULL, 2, "Empty input field."))
 		}
-	sc <- trimws(strsplit(x, ",")[[1]])
+	if	(is.na(x)) {
+		sc <- NA
+		} else {
+		sc <- trimws(strsplit(x, ",")[[1]])
+		}
 	if	(length(sc) == 1) {
 		if	(is.na(x) | is.infinite(x)) {
 			return(list(x, 0, x))
@@ -491,8 +549,10 @@ num.inputs <- function(x) {
 							  "p-value")),
 		 "woe.bin" = list(c(4, 5, 6), c("Minimum pct. of observations per bin", 
 						        "Minimum avg. target rate per bin",
-						        "WoE threshold")))
-
+						        "WoE threshold")),
+		 "mdt.bin" = list(c(2, 5, 6), c("Number of splitting groups for each node", 
+							  "Minimum pct. of observations per bin", 
+						        "Minimum avg. target rate per bin")))
 }
 #' Check for numeric arguments - monobin module
 #'@param x Binning algorithm from monobin package.
@@ -540,6 +600,18 @@ mono.inputs.check <- function(x, args.e) {
 			return(list(check.ok = FALSE, msg = msg))
 			}
 		}
+	if	(x%in%c("mdt.bin")) {
+		if	(num.args[1] < 2 | num.args[1] > 150) {
+			msg <- paste0("Input #Number of splitting groups for each node# has to be between 2 and 150.")
+			return(list(check.ok = FALSE, msg = msg))
+			}
+		if	(any(num.args[2:3] < 0) | any(num.args[2:3] > 0.5)) {
+			msg <- paste0("Inputs: ", 
+					  paste0(paste0("#", inp.indx[[2]][2:3], "#"), collapse = ", "), 
+					  " have to be between 0 and 0.5")
+			return(list(check.ok = FALSE, msg = msg))
+			}
+		}
 return(list(check.ok = TRUE, msg = "Inputs validated."))
 }
 #' Evaluation expression of the selected monobin function and its arguments
@@ -577,7 +649,11 @@ monobin.fun <- function(x) {
 		 "woe.bin" = "woe.bin(y = target, x = rf.l,  sc = sc,
 					   sc.method = args.e[[2]], y.type = args.e[[3]], 
 					   min.pct.obs = args.e[[4]], min.avg.rate = args.e[[5]], 
-					   woe.gap = args.e[[6]], force.trend = args.e[[7]])")
+					   woe.gap = args.e[[6]], force.trend = args.e[[7]])",
+		 "mdt.bin" = "mdt.bin(y = target, x = rf.l,  sc = sc, g = args.e[[2]], 
+					   sc.method = args.e[[3]], y.type = args.e[[4]], 
+					   min.pct.obs = args.e[[5]], min.avg.rate = args.e[[6]], 
+					   force.trend = args.e[[7]])")
 
 }
 #' Run monobin algorithm for the selected inputs

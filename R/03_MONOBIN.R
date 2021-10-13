@@ -78,9 +78,9 @@ mb.server <- function(id) {
 	moduleServer(id, function(input, output, session) {
 
 	srv <- reactiveValues(summary.tbl = NULL, db.trans = NULL)
-	num.args <- c(5, 6, 7, 6, 7, 7)
+	num.args <- c(5, 6, 7, 6, 7, 7, 7)
 	names(num.args) <- monobin.algo
-	y.type.arg <- c(4, 3, 3, 4, 3, 3)
+	y.type.arg <- c(4, 3, 3, 4, 3, 3, 4)
 	names(y.type.arg) <- monobin.algo
 
 
