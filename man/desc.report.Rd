@@ -9,7 +9,7 @@ desc.report(target, rf, sc, sc.method, db)
 \arguments{
 \item{target}{Selected target.}
 
-\item{rf}{Vector of selected numeric risk factors.}
+\item{rf}{Vector of a selected numeric risk factors.}
 
 \item{sc}{Numeric vector of special case values.}
 
@@ -18,7 +18,7 @@ desc.report(target, rf, sc, sc.method, db)
 \item{db}{Data frame of target and numeric risk factors.}
 }
 \value{
-Returns a data frame with descriptive statistics for selected risk drivers.
+Returns a data frame with descriptive statistics for the selected risk drivers.
 }
 \description{
 Descriptive statistics report

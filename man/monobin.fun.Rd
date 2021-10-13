@@ -2,7 +2,7 @@
 % Please edit documentation in R/99_HELPERS.R
 \name{monobin.fun}
 \alias{monobin.fun}
-\title{Evaluation expression of selected monobin function and its arguments}
+\title{Evaluation expression of the selected monobin function and its arguments}
 \usage{
 monobin.fun(x)
 }
@@ -10,10 +10,10 @@ monobin.fun(x)
 \item{x}{Binning algorithm from monobin package.}
 }
 \value{
-Returns an evaluation expression of selected monobin algorithm.
+Returns an evaluation expression of the selected monobin algorithm.
 }
 \description{
-Evaluation expression of selected monobin function and its arguments
+Evaluation expression of the selected monobin function and its arguments
 }
 \examples{
 if 	(interactive()) {

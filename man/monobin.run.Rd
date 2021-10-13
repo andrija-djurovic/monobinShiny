@@ -2,7 +2,7 @@
 % Please edit documentation in R/99_HELPERS.R
 \name{monobin.run}
 \alias{monobin.run}
-\title{Run monobin algorithm for selected inputs}
+\title{Run monobin algorithm for the selected inputs}
 \usage{
 monobin.run(algo, target.n, rf, sc, args.e, db)
 }
@@ -11,11 +11,11 @@ monobin.run(algo, target.n, rf, sc, args.e, db)
 
 \item{target.n}{Selected target.}
 
-\item{rf}{Vector of selected numeric risk factors.}
+\item{rf}{Vector of a selected numeric risk factors.}
 
 \item{sc}{Numeric vector of special case values.}
 
-\item{args.e}{Argument elements of selected monobin function.}
+\item{args.e}{Argument elements of the selected monobin function.}
 
 \item{db}{Data frame of target and numeric risk factors.}
 }
@@ -24,7 +24,7 @@ Returns a list of two data frame. The first data frame contains the results of i
 binning algorithm, while the second one contains transformed risk factors.
 }
 \description{
-Run monobin algorithm for selected inputs
+Run monobin algorithm for the selected inputs
 }
 \examples{
 if 	(interactive()) {

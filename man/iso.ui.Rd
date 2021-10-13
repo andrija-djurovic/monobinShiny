@@ -22,7 +22,8 @@ if 	(interactive()) {
 							  "ndr.bin" = ndr.sts.ui(id = id),
 							  "sts.bin" = ndr.sts.ui(id = id),
 							  "pct.bin" = pct.ui(id = id),
-							  "woe.bin" = woe.ui(id = id)))
+							  "woe.bin" = woe.ui(id = id),
+						          "mdt.bin" = mdt.ui(id = id)))
 		})	
 	}
 }

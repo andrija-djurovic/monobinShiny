@@ -11,7 +11,7 @@ num.inputs(x)
 }
 \value{
 Returns a list of two vectors: index and UI element label of numeric arguments of
-selected monobin function.
+the selected monobin function.
 }
 \description{
 Numeric arguments - monobin module
