@@ -1,6 +1,6 @@
 Package: monobinShiny
 Title: Shiny User Interface for 'monobin' Package
-Version: 0.0.9
+Version: 0.1.0
 Authors@R: 
     person(given = "Andrija",
            family = "Djurovic",
