@@ -47,7 +47,8 @@
 #'@export
 desc.stat <- function(x, y, sc = c(NA, NaN, Inf), sc.method = "together") {
 	scm.opts <- c("together", "separately")
-	cond.01 <- !is.numeric(x) | !is.numeric(y) | !is.numeric(sc) 
+	cond.01 <- !is.numeric(x) | !is.numeric(y) | ifelse(length(sc) == 1, ifelse(is.numeric(sc) | is.na(sc), FALSE,  TRUE), 
+							    ifelse(is.numeric(sc), FALSE, TRUE)) 
 	cond.02 <- !sc.method[1]%in%scm.opts
 	if	(cond.01) {
 		stop("x, y & sc have to be numeric vectors")
